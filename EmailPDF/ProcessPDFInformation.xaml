@@ -4,11 +4,12 @@
     <x:Property Name="lastName" Type="InOutArgument(x:String)" />
     <x:Property Name="birthdate" Type="InOutArgument(x:String)" />
     <x:Property Name="address" Type="InOutArgument(x:String)" />
+    <x:Property Name="status" Type="InOutArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>763.2,1520.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>763.2,1480.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -92,15 +93,15 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID12</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID8" Condition="[firstName = &quot;&quot;]" DisplayName="First Name Validation" sap:VirtualizedContainerService.HintSize="119.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+    <FlowDecision x:Name="__ReferenceID12" Condition="[firstName = &quot;&quot;]" DisplayName="First Name Validation" sap:VirtualizedContainerService.HintSize="119.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <av:Point x:Key="ShapeLocation">360.4,116.4</av:Point>
           <av:Size x:Key="ShapeSize">119.2,87.2</av:Size>
-          <av:PointCollection x:Key="TrueConnector">360.4,160 330.4,160 330.4,270 271.6,270</av:PointCollection>
+          <av:PointCollection x:Key="TrueConnector">360.4,160 330.4,160 330.4,250 261.6,250</av:PointCollection>
           <av:PointCollection x:Key="FalseConnector">479.6,160 499.6,160 499.6,376.4 439.6,376.4 439.6,406.4</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -108,9 +109,9 @@
         <FlowStep x:Name="__ReferenceID4">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">28.4,240</av:Point>
+              <av:Point x:Key="ShapeLocation">18.4,220</av:Point>
               <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">150,300 150,330 380.4,330 380.4,406.4</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">140,280 140,320</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_8">
@@ -127,64 +128,75 @@
             </sap:WorkflowViewStateService.ViewState>
           </Assign>
           <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID3" Condition="[lastName = &quot;&quot;]" DisplayName="Last Name Validation" sap:VirtualizedContainerService.HintSize="118.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <FlowStep x:Name="__ReferenceID8">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">350.8,406.4</av:Point>
-                  <av:Size x:Key="ShapeSize">118.4,87.2</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">350.8,450 320.8,450 320.8,570 271.6,570</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">469.2,450 487.8,450 487.8,646.4 427.8,646.4 427.8,676.4</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">18.4,320</av:Point>
+                  <av:Size x:Key="ShapeSize">243.2,60</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">140,380 140,410 320.8,410 320.8,380 380.4,380 380.4,406.4</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID5">
+              <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </Assign.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </Assign>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID3" Condition="[lastName = &quot;&quot;]" DisplayName="Last Name Validation" sap:VirtualizedContainerService.HintSize="118.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">28.4,540</av:Point>
-                      <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">150,600 150,630 372.2,630 372.2,676.4</av:PointCollection>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">350.8,406.4</av:Point>
+                      <av:Size x:Key="ShapeSize">118.4,87.2</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">350.8,450 320.8,450 320.8,500 271.6,500</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">469.2,450 487.8,450 487.8,646.4 427.8,646.4 427.8,676.4</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">Invalid</InArgument>
-                    </Assign.Value>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Assign>
-                  <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID2" Condition="[birthdate = &quot;&quot;]" DisplayName="Birthdate Validation" sap:VirtualizedContainerService.HintSize="111.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID5">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">344.4,676.4</av:Point>
-                          <av:Size x:Key="ShapeSize">111.2,87.2</av:Size>
-                          <av:PointCollection x:Key="TrueConnector">344.4,720 140,720 140,790</av:PointCollection>
-                          <av:PointCollection x:Key="FalseConnector">455.6,720 466.2,720 466.2,986.4 436.2,986.4 436.2,1016.4</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">28.4,470</av:Point>
+                          <av:Size x:Key="ShapeSize">243.2,60</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">150,530 150,560 160,560 160,610</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <FlowDecision.True>
-                        <FlowStep x:Name="__ReferenceID6">
+                      <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">Invalid</InArgument>
+                        </Assign.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Assign>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">18.4,790</av:Point>
+                              <av:Point x:Key="ShapeLocation">38.4,610</av:Point>
                               <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">140,850 140,880 383.8,880 383.8,1016.4</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">281.6,640 372.2,640 372.2,676.4</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                          <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                             <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[birthdate]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
                             </Assign.To>
                             <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">Invalid</InArgument>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
                             </Assign.Value>
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -193,28 +205,28 @@
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
                           <FlowStep.Next>
-                            <FlowDecision x:Name="__ReferenceID1" Condition="[address = &quot;&quot;]" DisplayName="Address Validation" sap:VirtualizedContainerService.HintSize="104.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                            <FlowDecision x:Name="__ReferenceID2" Condition="[birthdate = &quot;&quot;]" DisplayName="Birthdate Validation" sap:VirtualizedContainerService.HintSize="111.2,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  <av:Point x:Key="ShapeLocation">357.6,1016.4</av:Point>
-                                  <av:Size x:Key="ShapeSize">104.8,87.2</av:Size>
-                                  <av:PointCollection x:Key="TrueConnector">357.6,1060 251.6,1060</av:PointCollection>
-                                  <av:PointCollection x:Key="FalseConnector">462.4,1060 492.4,1060 492.4,1240 450,1240</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">344.4,676.4</av:Point>
+                                  <av:Size x:Key="ShapeSize">111.2,87.2</av:Size>
+                                  <av:PointCollection x:Key="TrueConnector">344.4,720 140,720 140,790</av:PointCollection>
+                                  <av:PointCollection x:Key="FalseConnector">455.6,720 466.2,720 466.2,986.4 436.2,986.4 436.2,1016.4</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                               <FlowDecision.True>
-                                <FlowStep x:Name="__ReferenceID7">
+                                <FlowStep x:Name="__ReferenceID6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <av:Point x:Key="ShapeLocation">8.40000000000001,1030</av:Point>
+                                      <av:Point x:Key="ShapeLocation">18.4,790</av:Point>
                                       <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">130,1090 130,1240 250,1240</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">140,850 140,880 150,880 150,920</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                                     <Assign.To>
-                                      <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
+                                      <OutArgument x:TypeArguments="x:String">[birthdate]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
                                       <InArgument x:TypeArguments="x:String">Invalid</InArgument>
@@ -226,36 +238,121 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </Assign>
                                   <FlowStep.Next>
-                                    <FlowStep x:Name="__ReferenceID0">
+                                    <FlowStep x:Name="__ReferenceID10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">250,1213.6</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                          <av:Point x:Key="ShapeLocation">28.4,920</av:Point>
+                                          <av:Size x:Key="ShapeSize">243.2,60</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">150,980 150,1010 383.8,1010 383.8,1016.4</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;first name : &quot; + firstName + vbCrLf +&#xD;&#xA;&quot;last name : &quot; + lastName + vbCrLf +&#xD;&#xA;&quot;Date : &quot; + birthdate + vbCrLf +&#xD;&#xA;&quot;Address : &quot; + address]" TopMost="True" />
+                                      <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                      <FlowStep.Next>
+                                        <FlowDecision x:Name="__ReferenceID1" Condition="[address = &quot;&quot;]" DisplayName="Address Validation" sap:VirtualizedContainerService.HintSize="104.8,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <av:Point x:Key="ShapeLocation">357.6,1016.4</av:Point>
+                                              <av:Size x:Key="ShapeSize">104.8,87.2</av:Size>
+                                              <av:PointCollection x:Key="TrueConnector">357.6,1060 251.6,1060</av:PointCollection>
+                                              <av:PointCollection x:Key="FalseConnector">462.4,1060 492.4,1060 492.4,1240 450,1240</av:PointCollection>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <FlowDecision.True>
+                                            <FlowStep x:Name="__ReferenceID7">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <av:Point x:Key="ShapeLocation">8.40000000000001,1030</av:Point>
+                                                  <av:Size x:Key="ShapeSize">243.2,60</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">130,1090 130,1120 140,1120 140,1130</av:PointCollection>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">Invalid</InArgument>
+                                                </Assign.Value>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Assign>
+                                              <FlowStep.Next>
+                                                <FlowStep x:Name="__ReferenceID11">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <av:Point x:Key="ShapeLocation">18.4,1130</av:Point>
+                                                      <av:Size x:Key="ShapeSize">243.2,60</av:Size>
+                                                      <av:PointCollection x:Key="ConnectorLocation">140,1190 140,1240 250,1240</av:PointCollection>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                    </Assign.Value>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </Assign>
+                                                  <FlowStep.Next>
+                                                    <FlowStep x:Name="__ReferenceID0">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <av:Point x:Key="ShapeLocation">250,1213.6</av:Point>
+                                                          <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;status : &quot; + status.ToString + vbCrLf +&#xD;&#xA;&quot;first name : &quot; + firstName + vbCrLf +&#xD;&#xA;&quot;last name : &quot; + lastName + vbCrLf +&#xD;&#xA;&quot;Date : &quot; + birthdate + vbCrLf +&#xD;&#xA;&quot;Address : &quot; + address]" TopMost="True" />
+                                                    </FlowStep>
+                                                  </FlowStep.Next>
+                                                </FlowStep>
+                                              </FlowStep.Next>
+                                            </FlowStep>
+                                          </FlowDecision.True>
+                                          <FlowDecision.False>
+                                            <x:Reference>__ReferenceID0</x:Reference>
+                                          </FlowDecision.False>
+                                        </FlowDecision>
+                                      </FlowStep.Next>
                                     </FlowStep>
                                   </FlowStep.Next>
                                 </FlowStep>
                               </FlowDecision.True>
                               <FlowDecision.False>
-                                <x:Reference>__ReferenceID0</x:Reference>
+                                <x:Reference>__ReferenceID1</x:Reference>
                               </FlowDecision.False>
                             </FlowDecision>
                           </FlowStep.Next>
                         </FlowStep>
-                      </FlowDecision.True>
-                      <FlowDecision.False>
-                        <x:Reference>__ReferenceID1</x:Reference>
-                      </FlowDecision.False>
-                    </FlowDecision>
-                  </FlowStep.Next>
-                </FlowStep>
-              </FlowDecision.True>
-              <FlowDecision.False>
-                <x:Reference>__ReferenceID2</x:Reference>
-              </FlowDecision.False>
-            </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <x:Reference>__ReferenceID2</x:Reference>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
           </FlowStep.Next>
         </FlowStep>
       </FlowDecision.True>
@@ -271,5 +368,9 @@
     <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID0</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
+    <x:Reference>__ReferenceID9</x:Reference>
+    <x:Reference>__ReferenceID10</x:Reference>
+    <x:Reference>__ReferenceID11</x:Reference>
   </Flowchart>
 </Activity>

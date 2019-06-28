@@ -1,15 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="ProcessMessages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="ProcessMessages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="outlookMessages" Type="InArgument(scg:List(snm:MailMessage))" />
     <x:Property Name="out_firstName" Type="OutArgument(x:String)" />
     <x:Property Name="out_lastName" Type="OutArgument(x:String)" />
     <x:Property Name="out_recordDate" Type="OutArgument(x:String)" />
     <x:Property Name="out_address" Type="OutArgument(x:String)" />
+    <x:Property Name="out_DT" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="out_status" Type="OutArgument(x:Boolean)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>453.6,1801.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>453.6,2029.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -77,21 +79,22 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Process Messages" sap:VirtualizedContainerService.HintSize="413.6,1721.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Process Messages" sap:VirtualizedContainerService.HintSize="413.6,1949.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="391.2,1596.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[outlookMessages]">
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="391.2,1824.8" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[outlookMessages]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="message" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1462.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,1690.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="files" />
             </Sequence.Variables>
@@ -117,13 +120,13 @@
                 <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("PDF")]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="352.8,1009.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[files]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="352.8,1237.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[files]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="file" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336.8,875.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="336.8,1103.2" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="fileContent" />
                     </Sequence.Variables>
@@ -166,13 +169,37 @@
                         <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(fileContent, "Address: (.*,.*,\s\w*\s\d*)").Groups(1).ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;first name : &quot; + out_firstName + vbCrLf +&#xA;&quot;last name : &quot; + out_lastName + vbCrLf +&#xA;&quot;Date : &quot; + out_recordDate + vbCrLf +&#xA;&quot;Address : &quot; + out_address]" TopMost="True" />
+                    <Assign sap:VirtualizedContainerService.HintSize="314.4,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[out_status]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Assign>
+                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;status : &quot; + out_status.ToString + vbCrLf +&#xD;&#xA;&quot;first name : &quot; + out_firstName + vbCrLf +&#xD;&#xA;&quot;last name : &quot; + out_lastName + vbCrLf +&#xD;&#xA;&quot;Date : &quot; + out_recordDate + vbCrLf +&#xD;&#xA;&quot;Address : &quot; + out_address]" TopMost="True" />
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ProcessPDFInformation workflow" sap:VirtualizedContainerService.HintSize="314.4,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ProcessPDFInformation.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
                         <InOutArgument x:TypeArguments="x:String" x:Key="firstName">[out_firstName]</InOutArgument>
                         <InOutArgument x:TypeArguments="x:String" x:Key="lastName">[out_lastName]</InOutArgument>
                         <InOutArgument x:TypeArguments="x:String" x:Key="birthdate">[out_recordDate]</InOutArgument>
                         <InOutArgument x:TypeArguments="x:String" x:Key="address">[out_address]</InOutArgument>
+                        <InOutArgument x:TypeArguments="x:Boolean" x:Key="status">[out_status]</InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PuttingDataInExcel workflow" sap:VirtualizedContainerService.HintSize="314.4,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PuttingDataInExcel.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="firstName">[out_firstName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="lastName">[out_lastName]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="birthdate">[out_recordDate]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="address">[out_address]</InArgument>
+                        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="DTout">[out_DT]</InOutArgument>
+                        <InArgument x:TypeArguments="x:Boolean" x:Key="status">[out_status]</InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>

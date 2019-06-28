@@ -1229,9 +1229,9 @@
     "restore": {
       "projectUniqueName": "EmailPDF",
       "projectName": "EmailPDF",
-      "projectPath": "C:\\Users\\Omar Garcia\\Documents\\UiPath\\EmailPDF\\.local",
+      "projectPath": "C:\\Users\\Omar Garcia\\Documents\\Github\\EmailPDF\\EmailPDF\\.local",
       "packagesPath": "C:\\Users\\Omar Garcia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Omar Garcia\\Documents\\UiPath\\EmailPDF\\.local"
+      "outputPath": "C:\\Users\\Omar Garcia\\Documents\\Github\\EmailPDF\\EmailPDF\\.local"
     },
     "frameworks": {
       "net461": {

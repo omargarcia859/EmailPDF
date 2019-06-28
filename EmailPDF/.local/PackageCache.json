@@ -39,6 +39,19 @@
     },
     {
       "Package": {
+        "Id": "UiPath.PDF.Activities",
+        "Version": "2.0.1"
+      },
+      "Assemblies": [
+        "C:\\Users\\Omar Garcia\\.nuget\\packages\\bitmiracle.docotic.pdf/5.2.8369\\lib/net40/BitMiracle.Docotic.Pdf.dll",
+        "C:\\Users\\Omar Garcia\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
+        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.Activities.Design.dll",
+        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.Activities.dll",
+        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "19.6.0"
       },
@@ -102,19 +115,6 @@
         "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
         "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.Tesseract.dll",
         "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "UiPath.PDF.Activities",
-        "Version": "2.0.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\Omar Garcia\\.nuget\\packages\\bitmiracle.docotic.pdf/5.2.8369\\lib/net40/BitMiracle.Docotic.Pdf.dll",
-        "C:\\Users\\Omar Garcia\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.Activities.Design.dll",
-        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.Activities.dll",
-        "C:\\Users\\Omar Garcia\\.nuget\\packages\\uipath.pdf.activities/2.0.1\\lib/net461/UiPath.PDF.dll"
       ]
     }
   ],

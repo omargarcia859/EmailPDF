@@ -636,10 +636,12 @@
       ]
     },
     "Extended.Wpf.Toolkit/2.8.0": {
-      "sha512": "YzLQ/sB91g0gRftvlPGOqYJe6TwiPTQoYhO+4ZSsnxaMEQZ5KZIQySTtsTWZ0HJC5+xrgk1Z/if7kjY4cSRPdw==",
+      "sha512": "wKjJl4sDyXTVzgiKTBTw8jT0/3OwpEklQuWGe1Nz2HX0joiBeUzIurY2mnERni+8XHwateRcuks6yk/cuR22fA==",
       "type": "package",
       "path": "extended.wpf.toolkit/2.8.0",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "extended.wpf.toolkit.2.8.0.nupkg.sha512",
         "extended.wpf.toolkit.nuspec",
@@ -665,10 +667,11 @@
       ]
     },
     "Humanizer.Core/2.4.2": {
-      "sha512": "A8amPZrfrFU+6BO+t/NLejofWah39XsRuovQqaHdYYtXANM+dexMrc+AbLmuH3qNV4hJv6FArBsBBtZcaODLZg==",
+      "sha512": "1ZKy7LHVYuhmM398hpvyWCcc2Fcx+hqiGYASELDthjWhVrsA6IabYnHRfkQFF6nGG6x4fA1D0StDX/U2Pj+FdQ==",
       "type": "package",
       "path": "humanizer.core/2.4.2",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "humanizer.core.2.4.2.nupkg.sha512",
         "humanizer.core.nuspec",
@@ -679,21 +682,22 @@
       ]
     },
     "interop.domino.dll/1.0.0": {
-      "sha512": "SfX99DH0cVAAEW6Uhk+abi7cG/X08yL6klGU9HxBYR/IFVonxzEgiHbubXYPExMtioiwBLhR8gm9Q+29Gt91Rw==",
+      "sha512": "gKTX8fwrysbgSWSrJUpMpdp/qmRwYT8JTnbpFzTN72WnX3M1vxkHzpxH3oGMSqpHf20n9AZ0TzDJkt2itp6hyQ==",
       "type": "package",
       "path": "interop.domino.dll/1.0.0",
       "files": [
-        ".signature.p7s",
+        ".nupkg.metadata",
         "interop.domino.dll.1.0.0.nupkg.sha512",
         "interop.domino.dll.nuspec",
         "lib/Interop.Domino.dll"
       ]
     },
     "Microsoft.AspNet.SignalR.Client/2.4.0": {
-      "sha512": "kQN+HGGrZqSjpQUdVwlV4DJVsvx6wKo8J5hu/pcsdIaQ/LGEnCSQSRpq5BV7+iCq0MwEAHEZvrnivWDe0j9xfg==",
+      "sha512": "xGoQq9dEsBU49U1Whl0To2JyRQePmo8ayYS8VNruLlQaX+fQBzYyLJeMlW9r7mlt8Vc9JP+083m9pKrfYpdDbg==",
       "type": "package",
       "path": "microsoft.aspnet.signalr.client/2.4.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/Microsoft.AspNet.SignalR.Client.dll",
         "lib/net40/Microsoft.AspNet.SignalR.Client.pdb",
@@ -731,10 +735,11 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.20": {
-      "sha512": "lJX2JsPrFVG+TxTXvLPe4hlhLqSHXcgLyCIDWZ6BM9LOTCaX+Jkco6ZW3L6mQ3UHUiJgxk0psW1G62QjEJwEMg==",
+      "sha512": "bw/H1nO4JdnhTagPHWIFQwtlQ6rb2jqw5RTrqPsPqzrjhJxc7P6MyNGdf4pgHQdzdpBSNOfZTEQifoUkxmzYXQ==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.20",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/Microsoft.Rest.ClientRuntime.dll",
         "lib/net452/Microsoft.Rest.ClientRuntime.runtimeconfig.json",
@@ -841,10 +846,11 @@
       ]
     },
     "System.ValueTuple/4.5.0": {
-      "sha512": "b4TIdjLi5RepihnaO93cfjAgi69fx1ViGvNHYhy9k77LKms2BowENhdpZn9bL9s/dp0tOhv31olkSaQSoHgxTA==",
+      "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
       "path": "system.valuetuple/4.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -884,10 +890,11 @@
       ]
     },
     "UiPath/19.6.7108.25473": {
-      "sha512": "p7lUEMlBEUNr6xaassfJNMLizuye2eCf8DW4T9adF5sGA00LukV5WL9DhA/tyZxL2RyioKguR+Qd3z6e9WtXKg==",
+      "sha512": "V63r0DNVv1EY8YqGj7kXuLZJxHVbFd5lJiS0FSQGW5d9oPzP9eaPbovoioUg/SXGx/fnjN4KpNMhYwJj4UkI+A==",
       "type": "package",
       "path": "uipath/19.6.7108.25473",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/UiPath.targets",
         "build/UiPath/BrowserNativeMessagingImpl.dll",
@@ -938,10 +945,11 @@
       ]
     },
     "UiPath.Excel.Activities/2.6.2": {
-      "sha512": "BGyLXiTLATDob8++cStFTfMFDTU5Jjixt2ssI3yvSpm1SgyIzrH493/WkFFkZ6iTKh7O22k9rTkyMlytgxQ+UA==",
+      "sha512": "nIkHK19PEjBDmQEiMmH7ZIi2mK6M/E7AXH2zhepOcFL/pf2dk9ZGuVBhs7ijhzlpBk1dzdNAfKWQ0wj58WG2kA==",
       "type": "package",
       "path": "uipath.excel.activities/2.6.2",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.Excel.Activities.Design.dll",
         "lib/net461/UiPath.Excel.Activities.dll",
@@ -963,10 +971,11 @@
       ]
     },
     "UiPath.Mail.Activities/1.5.0": {
-      "sha512": "9rBQMVxynB5P0EgyZOfRhQh8btz1/BYhw8Kll5OlbKfBAA8zRqqbDlZSdGktD7Abel6+OxV6AGqHYTt8cMdzjQ==",
+      "sha512": "2Mb0m/a5mdAiX7wkDjEd/ufHtRmvyNoxbITwUyEX9ImM9jRbdPizMX0292oE3ujwShCzziCLfq7DUasLpPwVRA==",
       "type": "package",
       "path": "uipath.mail.activities/1.5.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net452/MailKit.dll",
         "lib/net452/MailKit.xml",
@@ -989,10 +998,11 @@
       ]
     },
     "UiPath.OCR.Contracts/1.0.0": {
-      "sha512": "h5QgDgpFky81C/q7zPvLtAc6eTHOWIbf8seIS9OL1G6oVbkAsPVTXgP1X1xac4G6ZTaZVKqnIxdvnihut4BFBg==",
+      "sha512": "8TtVtfYiZ/lNZTPbkaBQmf/NazOYxgiN0UFuAAFRo3iUShUHnX392z3cOSgp+I6+ydtncwlwy/G7bS46qgu8kQ==",
       "type": "package",
       "path": "uipath.ocr.contracts/1.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/UiPath.OCR.Contracts.dll",
         "uipath.ocr.contracts.1.0.0.nupkg.sha512",
@@ -1000,10 +1010,11 @@
       ]
     },
     "UiPath.PDF.Activities/2.0.1": {
-      "sha512": "Q6CvWXCMMwyr0ClYnvOpJq+biMPYiuu0pDUkPx7/iUDXP4+emuJPc9AeOW9UBIlsVOJTzaDuCKxvqiNc8PE0cw==",
+      "sha512": "CLYRW2ibTQbCnDoGkgcDAS5UjJvZn6UiT9tbHKiWxteTVObYgeqU8kWcu82APAl8D78P8bZZTrsjNxiMuqHrIw==",
       "type": "package",
       "path": "uipath.pdf.activities/2.0.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/UiPath.PDF.Activities.Design.dll",
         "lib/net461/UiPath.PDF.Activities.dll",
@@ -1025,10 +1036,11 @@
       ]
     },
     "UiPath.System.Activities/19.6.0": {
-      "sha512": "gjbbriFRce/mebC1rA9qBrAqzlZscEjZ+Oio84t9NwSEPgmPijljhxvP587svTi/XoFnkUcBtzC/6kf8vKOXgQ==",
+      "sha512": "uEWNxYa4VWt7IQ2DRZkvFOq6/j1S45PdgqyLo/5UXzTZPTiRQVo6VjN3bakg6DfJ2IJ20Jad7I6X2ezJj18XTQ==",
       "type": "package",
       "path": "uipath.system.activities/19.6.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
@@ -1056,10 +1068,11 @@
       ]
     },
     "UiPath.UIAutomation.Activities/19.6.0": {
-      "sha512": "1Winp7qgXcRi2wl5r2geO1s0ot6uqJR7nxsdJpyKsUeZGNzqJhpgeNqErvVb8mSDYGP9u4q1C/VViaFeHNBNOw==",
+      "sha512": "VGVSW35mdwh95TLeUJShPoZXr2+h7qhPyFQAqs/yiOrf73cbQMxmEEWI7py2I6ZQtMoHuALsgGjT+tp51FKoBQ==",
       "type": "package",
       "path": "uipath.uiautomation.activities/19.6.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
         "build/ActiproSoftware.Docking.Wpf.dll",
@@ -1122,10 +1135,11 @@
       ]
     },
     "UiPath.Vision/1.6.0": {
-      "sha512": "xhccT7CoapdROO0tXzfuksyMg9pCQKU/3Xq4xU7S55zPITAiMWbW9f55qDITZY4QYvhM9k9hGNdu2Ivl3ppJ8A==",
+      "sha512": "Neif/GWzQoejKjhAU8C7eVRsjpte9b5O4NFEhcGydPu/9//JxQp6KxGqcI6CH7rzZs2BY6cKKp9zx9IjINu6yA==",
       "type": "package",
       "path": "uipath.vision/1.6.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "build/AForge.Imaging.dll",
         "build/AForge.Math.dll",
@@ -1209,15 +1223,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cameron Troester\\.nuget\\packages\\": {}
+    "C:\\Users\\Omar Garcia\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "EmailPDF",
       "projectName": "EmailPDF",
-      "projectPath": "C:\\Users\\Cameron Troester\\Desktop\\EmailPDF\\EmailPDF\\EmailPDF\\.local",
-      "packagesPath": "C:\\Users\\Cameron Troester\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cameron Troester\\Desktop\\EmailPDF\\EmailPDF\\EmailPDF\\.local"
+      "projectPath": "C:\\Users\\Omar Garcia\\Documents\\Github\\EmailPDF\\EmailPDF\\.local",
+      "packagesPath": "C:\\Users\\Omar Garcia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Omar Garcia\\Documents\\Github\\EmailPDF\\EmailPDF\\.local"
     },
     "frameworks": {
       "net461": {

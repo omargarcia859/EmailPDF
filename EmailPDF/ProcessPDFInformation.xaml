@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>763.2,1480.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>763.2,1508.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -78,10 +78,9 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap:VirtualizedContainerService.HintSize="723.2,1400.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+  <Flowchart sap2010:Annotation.AnnotationText="Flow chart for validating the different feild of a PDF" sap:VirtualizedContainerService.HintSize="723.2,1428.8" sap2010:WorkflowViewState.IdRef="Flowchart_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -90,6 +89,7 @@
         <av:PointCollection x:Key="ConnectorLocation">420,77.6 420,116.4</av:PointCollection>
         <x:Double x:Key="Width">708.4</x:Double>
         <x:Double x:Key="Height">1364.0000000000002</x:Double>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -114,7 +114,7 @@
               <av:PointCollection x:Key="ConnectorLocation">140,280 140,320</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign DisplayName="Invalidate First Name" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_8">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[firstName]</OutArgument>
             </Assign.To>
@@ -136,7 +136,7 @@
                   <av:PointCollection x:Key="ConnectorLocation">140,380 140,410 320.8,410 320.8,380 380.4,380 380.4,406.4</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign DisplayName="Set status to false (Invalid)" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
                 </Assign.To>
@@ -166,10 +166,10 @@
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">28.4,470</av:Point>
                           <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">150,530 150,560 160,560 160,610</av:PointCollection>
+                          <av:PointCollection x:Key="ConnectorLocation">150,530 150,600</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign DisplayName="Invalidate Last Name" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[lastName]</OutArgument>
                         </Assign.To>
@@ -186,12 +186,12 @@
                         <FlowStep x:Name="__ReferenceID9">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">38.4,610</av:Point>
+                              <av:Point x:Key="ShapeLocation">28.4,600</av:Point>
                               <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">281.6,640 372.2,640 372.2,676.4</av:PointCollection>
+                              <av:PointCollection x:Key="ConnectorLocation">271.6,630 372.2,630 372.2,676.4</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                          <Assign DisplayName="Set status to false (Invalid)" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
                             </Assign.To>
@@ -221,10 +221,10 @@
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <av:Point x:Key="ShapeLocation">18.4,790</av:Point>
                                       <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                                      <av:PointCollection x:Key="ConnectorLocation">140,850 140,880 150,880 150,920</av:PointCollection>
+                                      <av:PointCollection x:Key="ConnectorLocation">140,850 140,910</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                  <Assign DisplayName="Invalidate Birth Date" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                                     <Assign.To>
                                       <OutArgument x:TypeArguments="x:String">[birthdate]</OutArgument>
                                     </Assign.To>
@@ -241,12 +241,12 @@
                                     <FlowStep x:Name="__ReferenceID10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">28.4,920</av:Point>
+                                          <av:Point x:Key="ShapeLocation">18.4,910</av:Point>
                                           <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">150,980 150,1010 383.8,1010 383.8,1016.4</av:PointCollection>
+                                          <av:PointCollection x:Key="ConnectorLocation">140,970 140,1000 383.8,1000 383.8,1016.4</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                      <Assign DisplayName="Set status to false (Invalid)" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_16">
                                         <Assign.To>
                                           <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
                                         </Assign.To>
@@ -266,7 +266,7 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <av:Point x:Key="ShapeLocation">357.6,1016.4</av:Point>
                                               <av:Size x:Key="ShapeSize">104.8,87.2</av:Size>
-                                              <av:PointCollection x:Key="TrueConnector">357.6,1060 251.6,1060</av:PointCollection>
+                                              <av:PointCollection x:Key="TrueConnector">357.6,1060 261.6,1060</av:PointCollection>
                                               <av:PointCollection x:Key="FalseConnector">462.4,1060 492.4,1060 492.4,1240 450,1240</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
@@ -274,12 +274,12 @@
                                             <FlowStep x:Name="__ReferenceID7">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">8.40000000000001,1030</av:Point>
+                                                  <av:Point x:Key="ShapeLocation">18.4,1030</av:Point>
                                                   <av:Size x:Key="ShapeSize">243.2,60</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">130,1090 130,1120 140,1120 140,1130</av:PointCollection>
+                                                  <av:PointCollection x:Key="ConnectorLocation">140,1090 140,1130</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                              <Assign DisplayName="Invalidate Address" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_13">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:String">[address]</OutArgument>
                                                 </Assign.To>
@@ -301,7 +301,7 @@
                                                       <av:PointCollection x:Key="ConnectorLocation">140,1190 140,1240 250,1240</av:PointCollection>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Assign sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                                  <Assign DisplayName="Set status to false (Invalid)" sap:VirtualizedContainerService.HintSize="243.2,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="x:Boolean">[status]</OutArgument>
                                                     </Assign.To>
@@ -322,7 +322,13 @@
                                                           <av:Size x:Key="ShapeSize">200,52.8</av:Size>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;status : &quot; + status.ToString + vbCrLf +&#xD;&#xA;&quot;first name : &quot; + firstName + vbCrLf +&#xD;&#xA;&quot;last name : &quot; + lastName + vbCrLf +&#xD;&#xA;&quot;Date : &quot; + birthdate + vbCrLf +&#xD;&#xA;&quot;Address : &quot; + address]" TopMost="True" />
+                                                      <ui:CommentOut sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                        <ui:CommentOut.Body>
+                                                          <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;status : &quot; + status.ToString + vbCrLf +&#xA;&quot;first name : &quot; + firstName + vbCrLf +&#xA;&quot;last name : &quot; + lastName + vbCrLf +&#xA;&quot;Date : &quot; + birthdate + vbCrLf +&#xA;&quot;Address : &quot; + address]" TopMost="True" />
+                                                          </Sequence>
+                                                        </ui:CommentOut.Body>
+                                                      </ui:CommentOut>
                                                     </FlowStep>
                                                   </FlowStep.Next>
                                                 </FlowStep>
